@@ -1,0 +1,9 @@
+<div class="header">
+    <a href="#default" class="logo">SynerZip Assignment</a>
+    <div class="header-right">
+      <a [routerLink]="['/users/login']" *ngIf = "loggedIn != 'True'">Login</a>
+      <a href="#" (click)="logOut()" *ngIf = "loggedIn == 'True'">Logout</a>
+    </div>
+  </div>
+<app-alerts></app-alerts>
+<router-outlet></router-outlet>

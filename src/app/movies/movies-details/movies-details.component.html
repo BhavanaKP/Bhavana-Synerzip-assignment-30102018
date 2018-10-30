@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row">
+        <h1>{{details.type|titlecase}}: {{details.title}}</h1>
+        <div class="col-xs-4 item-photo">
+            <img style="max-width:100%;" src="{{details.poster}}" />
+        </div>
+        <div class="col-xs-8" style="border:0px solid gray">
+
+
+
+            <h4>{{details.type|titlecase}}: {{details.title}} ({{details.year}})</h4>
+            <!-- <div class="section">
+                  <div *ngFor="let rating of details.ratings">
+                      <div>{{rating.source}}: </div>
+                      <div><strong>{{rating.value}}</strong></div>
+                  </div>
+              </div>
+               -->
+            <div>
+                <p class="text-muted text-small">
+                    <span class="certificate">{{details.rated}}</span>
+                    <span class="ghost"> | </span>
+                    <span class="runtime">{{details.runtime}}</span>
+                    <span class="ghost"> | </span>
+                    <span class="genre">{{details.genre}}</span>
+                    <span class="ghost"> | </span>
+                    <span class="released">{{details.released}}</span>
+                </p>
+                
+                <p class="text-muted text-small" *ngFor="let rating of details.ratings">
+                        <strong>{{rating.source}}:</strong> {{rating.value}}
+                </p>
+                <p class="text-muted text-small">
+                        <strong>{{details.ratings[0].source}}:</strong> {{details.ratings[0].value}}
+                </p>
+                <p class="text-muted text-small">
+                    <strong>Director:</strong> {{details.director}}
+                </p>
+                <p class="text-muted text-small">
+                    <strong>Stars:</strong>
+                    {{details.actors}}
+                </p>
+                <p class="text-muted text-small">
+                    <strong>Writer:</strong>
+                    {{details.writer}}
+                </p>
+                <p>{{details.plot}}</p>
+                <p class="text-muted text-small">
+                        <span class="imdbRating">imdb Rating: {{details.imdbRating}}</span>
+                        <span class="ghost"> | </span>
+                        <span class="imdbVotes">imdb Votes: {{details.imdbVotes}}</span>
+                        
+                </p>
+                <p class="text-muted text-small">
+                        <span class="production">Production:{{details.production}}</span>
+                        <span class="ghost"> | </span>
+                        <span class="website">Website:<a href="{{details.website}}" target="_blank">{{details.website}}</a></span>
+                </p>
+                <p class="text-muted text-small">
+                        <span class="language">Language: {{details.language}}</span>
+                        <span class="ghost"> | </span>
+                        <span class="country">Country: {{details.country}}</span>
+                </p>
+                <p class="text-muted text-small">
+                        <span class="Awards">Awards: {{details.awards}}</span>
+                        <span class="ghost"> | </span>
+                        <span class="DVD">DVD: {{details.dvd}}</span>
+                        <span class="ghost"> | </span>
+                        <span class="boxOffice">BoxOffice: {{details.boxOffice}}</span>
+                </p>
+            </div>
+            
+
+
+
+            <!-- Book Ticket-->
+            <div class="section" style="padding-bottom:20px;">
+                <button class="btn btn-primary" [routerLink]="['/movies']">
+                    Back
+                </button>
+                <button (click)="goToUrl()" class="btn btn-success" style="margin-left: 20px;">
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    Book Ticket
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+</div>

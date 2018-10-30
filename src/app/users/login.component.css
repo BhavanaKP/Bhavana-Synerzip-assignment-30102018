@@ -1,0 +1,10 @@
+.frmborder{ 
+    width: 30% !important;
+    margin: 8px;
+    padding-bottom: 20px !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+.form-control {
+    width: 70%;
+}
